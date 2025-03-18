@@ -31,7 +31,7 @@ const App: React.FC = () => {
   const [page, setPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [modalImage, setModalImage] = useState<Image | null>(null);
+  const [modalImage, setModalImage] = useState<Image | undefined>(undefined);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const App: React.FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalImage(null);
+    setModalImage(undefined);
   };
 
   return (
